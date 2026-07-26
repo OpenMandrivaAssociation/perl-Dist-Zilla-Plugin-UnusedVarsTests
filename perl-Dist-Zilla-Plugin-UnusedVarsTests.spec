@@ -1,15 +1,13 @@
 %define upstream_name    Dist-Zilla-Plugin-UnusedVarsTests
-%define upstream_version 1.100860
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.100860
+Release:	7
 
 Summary:	Release tests for unused variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Dist-Zilla-Plugin-UnusedVarsTests
-Source0:	http://www.cpan.org/modules/by-module/Dist/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Dist/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +29,7 @@ providing the following file:
   xt/release/unused-vars.t - a standard Test::Vars test
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
